@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-09-07T13:48:21
+# Project created by QtCreator 2015-10-12T02:01:37
 #
 #-------------------------------------------------
 
@@ -8,11 +8,9 @@ CONFIG += c++11
 
 RC_ICONS = resource/b4p_icon.ico
 
-QT       += core gui
+QT += core gui
 QT += webkitwidgets
 QT += network
-QT += sql
-QT += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,31 +18,32 @@ TARGET = Bio4Player
 TEMPLATE = app
 
 
-SOURCES += src/main.cpp\
-        ui/b4p_mainwindow.cpp \
-    src/Bio4PlayerLib/b4p_playermanager.cpp \
-    ui/b4p_settingwindow.cpp \
-    src/Bio4PlayerLib/b4p_setting.cpp \
-    src/Bio4PlayerLib/b4p_nicookie.cpp \
-    src/Bio4PlayerLib/b4p_bio4searcher.cpp \
-    src/Bio4PlayerLib/b4p_livedata.cpp \
-    ui/b4p_bio4listitem.cpp \
-    ui/b4p_livewindow.cpp
+SOURCES += \
+    source/main.cpp \
+    userinterface/b4p_mainwindow.cpp \
+    userinterface/b4p_liveitem.cpp \
+    userinterface/b4p_loginwindow.cpp \
+    source/b4p_playermanager.cpp \
+    source/b4p_login.cpp \
+    source/b4p_heartbeat.cpp \
+    source/b4p_livesearcher.cpp \
+    userinterface/b4p_viewpanel.cpp
 
-HEADERS  += ui/b4p_mainwindow.h \
-    src/Bio4PlayerLib/b4p_playermanager.h \
-    ui/b4p_settingwindow.h \
-    src/Bio4PlayerLib/b4p_setting.h \
-    src/Bio4PlayerLib/b4p_nicookie.h \
-    src/Bio4PlayerLib/b4p_bio4searcher.h \
-    src/Bio4PlayerLib/b4p_livedata.h \
-    ui/b4p_bio4listitem.h \
-    ui/b4p_livewindow.h
+HEADERS  += \
+    userinterface/b4p_mainwindow.h \
+    userinterface/b4p_liveitem.h \
+    userinterface/b4p_loginwindow.h \
+    source/b4p_playermanager.h \
+    source/b4p_login.h \
+    source/b4p_heartbeat.h \
+    source/b4p_livesearcher.h \
+    userinterface/b4p_viewpanel.h
 
-FORMS    += ui/b4p_mainwindow.ui \
-    ui/b4p_settingwindow.ui \
-    ui/b4p_bio4listitem.ui \
-    ui/b4p_livewindow.ui
+FORMS    += \
+    userinterface/b4p_mainwindow.ui \
+    userinterface/b4p_liveitem.ui \
+    userinterface/b4p_loginwindow.ui \
+    userinterface/b4p_viewpanel.ui
 
 RESOURCES += \
-    resource/b4p_icons.qrc
+    resource/resource.qrc

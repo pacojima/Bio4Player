@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>b4p_icon.ico</file>
         <file>b4c_reflesh.ico</file>
+        <file>b4p_icon.ico</file>
         <file>b4p_livereika.ico</file>
     </qresource>
 </RCC>

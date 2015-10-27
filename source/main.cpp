@@ -1,11 +1,13 @@
-#include "../ui/b4p_mainwindow.h"
+#include "b4p_playermanager.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+
+    PlayerManager *mPlayer = new PlayerManager();
+
+    mPlayer->Initialize();
 
     return a.exec();
 }
