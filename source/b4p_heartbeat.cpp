@@ -23,9 +23,8 @@ void Heartbeat::RunHeartBeat()
         rq->setHeader( QNetworkRequest::CookieHeader, mPlayer->GetVarNicookie() );
         QNetworkReply *reply = nam->get( *rq );
         eventloop.exec();
-        qDebug() << URL;
         qDebug() << reply->readAll();
-        QThread::sleep( 60 );
+        QThread::sleep( 30 );
     }
 }
 
